@@ -88,7 +88,6 @@ class SignUpPhoneValidation extends Component{
                  value={this.inputValue} 
                  onChange={(e) => {this.changeInput(e)}}/>
         {
-
           this.state.valid 
           ? 
             <NavLink 
