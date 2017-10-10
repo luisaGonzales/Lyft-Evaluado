@@ -7,17 +7,26 @@ import {
   Redirect
 } from "react-router-dom";
 import './SignUpPhoneValidation.css';
+import './Utils.js'
+
+
+console.log(name, email);
+
+
 class SignUpForm extends Component {
   constructor(props) {
-    super(props);
+	super(props);
+	this.name =  document.getElementById('name').value;
+	this.email =  document.getElementById('email').value;
     this.state = {
       goFordward: false
-    };
+	};
+	
   }
 
+  console.log(name, email);
   render() {
     const { model } = this.props;
-    console.log("SignUpForm");
 
     const onInputChange = e => {
       this.setState({
@@ -51,7 +60,7 @@ class SignUpForm extends Component {
                     <span className="input-group-addon">
                       <i className="glyphicon glyphicon-envelope" />
                     </span>
-                    <input title="Coloca tu e-mail" id="email" type="email" className="form-control" name="email" placeholder="Correo" />
+                    <input title="Coloca tu e-mail" id="email" type="email" className="form-control" id="email" name="email" placeholder="Correo" />
                   </div>
                   <br />
 				  <label className="form-check-label">
@@ -78,6 +87,11 @@ class SignUpForm extends Component {
       </div>
     );
   }
+  console.log(this.name, this.email);
+  
 }
-
 export default SignUpForm;
+
+
+
+
