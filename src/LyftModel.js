@@ -1,8 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
+
 import data from './data/Data';
->>>>>>> d6dd61674ee539f8e3615f7b9aa2deb2b60c148e
+
 import Utils from './Utils';
 
 class LyftModel {
@@ -28,14 +27,10 @@ class LyftModel {
 	subscribe (render) {
 		this.notify = render;
 	}
-<<<<<<< HEAD
-    
-=======
 	setActiveProperty (property) {
 		this.activeProperty = property;
 		this.notify();
 	}
->>>>>>> d6dd61674ee539f8e3615f7b9aa2deb2b60c148e
 
 	setTarget (targetPlace) {
 		this.targetPlace  = targetPlace;
