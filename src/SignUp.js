@@ -7,6 +7,7 @@ import {
 	Redirect
 } from 'react-router-dom'
 import './SignUp.css';
+import './Utils.js'
 
 const SignUp = ({model}) => {
 	return (
