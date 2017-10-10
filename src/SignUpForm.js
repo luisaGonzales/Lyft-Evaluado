@@ -10,12 +10,12 @@ import './SignUpPhoneValidation.css';
 import './Utils.js'
 
 
-console.log(name, email);
 
 
 class SignUpForm extends Component {
   constructor(props) {
 	super(props);
+	this.user = [ ];
 	this.name =  document.getElementById('name').value;
 	this.email =  document.getElementById('email').value;
     this.state = {
@@ -24,7 +24,6 @@ class SignUpForm extends Component {
 	
   }
 
-  console.log(name, email);
   render() {
     const { model } = this.props;
 
@@ -87,8 +86,7 @@ class SignUpForm extends Component {
       </div>
     );
   }
-  console.log(this.name, this.email);
-  
+ 
 }
 export default SignUpForm;
 
