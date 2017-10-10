@@ -34,7 +34,8 @@ const App = (props) => {
 				<Route  path="/signup-form" render={() => <SignUpForm model={model} />}/>
 
 				<Route  path="/lyftmap" render={() => <LyftMap model={model} />}/>
-
+				<Route path="/Lyft-Evaluado"
+				       render={() => <Redirect to= {'/home'}/>}/>
 				<Route component={NotFound}/>
 			</Switch>
 		</div>
