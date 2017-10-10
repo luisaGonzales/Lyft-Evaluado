@@ -87,7 +87,7 @@ class SignUp extends Component {
 						  </NavLink>
 						:
 						  <button 
-							className="btn btn-lg btnNext disabled" 
+							className="btn btn-lg btnNext anable" type="submit"
 							>
 							Next
 						  </button>
