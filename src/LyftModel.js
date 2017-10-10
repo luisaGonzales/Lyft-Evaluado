@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Utils from "./Utils.js";
 
 class LyftModel {
 	constructor () {

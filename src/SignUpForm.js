@@ -29,6 +29,23 @@ class SignUpForm extends Component {
   }
 
   render() {
+		// let	letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+		// let especiales = [8,37,39,46];
+		// let tecla_especial = false
+		// for(var i in especiales) {
+		// 	if(key ==especiales[i]) {
+		// 		tecla_especial= true;
+		// 		break;
+		// 	}
+		// }
+		// if(letras.indexOf(tecla) ==-1 && !tecla_especial)
+		// return false;
+		// if(this.name.length ==0 ) {
+		// 	console.log('faltanomre');
+		// 	document.getElementById('name').focus;
+		// }else if{
+
+		// }
     const { model } = this.props;
 
     const onInputChange = e => {
