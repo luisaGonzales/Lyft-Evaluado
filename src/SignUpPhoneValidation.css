@@ -4,20 +4,17 @@
     left: 1%;
 }
 
-.btnVolver a {
-    color: black;
-}
-
 .btnVolver a:hover {
     font-size: 0.8em;
 }
 
 .back{
     font-size: 4em;
+    color: black !important;
 }
 
 .btnNext{
-    background-color: #FF00BF;
+    background-color: #D90472;
     color: white;
     border: none;
     width: 90%;
@@ -33,6 +30,6 @@
     cursor: not-allowed;
     box-shadow: none;
     opacity: .65;
-    background-color: rgba(255, 0, 191, 0.53);
-    color: white;
+    background-color: rgba(217, 4, 114, 0.36);
+    color: white !important;
 }
