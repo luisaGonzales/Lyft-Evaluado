@@ -11,69 +11,69 @@ import './SignUpPhoneValidation.css';
 class SignUpPhoneValidation extends Component{
   constructor(props){
     super(props);
-    this.cantidad = 3;
-    this.tope = 10;
-    this.valorInput = undefined;
-    this.pinUsuario = undefined;
-    this.pinCreado = [];
+    this.size = 3;
+    this.limit = 10;
+    this.inputValue = undefined;
+    this.pinUser = undefined;
+    this.pinCreated = [];
     this.t = undefined;
     this.state = {
       pin : [],
-      validar : false,
-      mostrar: false
+      valid : false,
+      show: false
     }
   }
-  generarPin(array){
-    let valores = Math.floor(Math.random() * this.tope);
+  getPin(array){
+    let values = Math.floor(Math.random() * this.limit);
     if (!array.some(function (e) {
-            return e === valores
+            return e === values
         })) {
-        array.push(valores);
+        array.push(values);
     }
   }
-  crearPin(){
-    while (this.pinCreado.length < this.cantidad && this.cantidad < this.tope) {
-      this.generarPin(this.pinCreado);
+  createPin(){
+    while (this.pinCreated.length < this.size && this.size < this.limit) {
+      this.getPin(this.pinCreated);
     }
     this.setState({
-      pin : this.pinCreado
+      pin : this.pinCreated
     })
   }
-  mostrarTodo(e){
+  showAll(e){
     this.setState({
-      mostrar: true
+      show: true
     });
-    this.crearPin();
+    this.createPin();
   }
-  inputCambio(e){
-    let pinIngresado = this.state.pin.toString().replace(/,/g, "");
-    if(e.target.value === pinIngresado){
+  changeInput(e){
+    let newPin = this.state.pin.toString().replace(/,/g, "");
+    if(e.target.value === newPin){
       this.setState({
-        validar : true
+        valid : true
       });
     } else {
       this.setState({
-        validar : false 
+        valid : false 
       });
     } 
   }
-  validarPin(input){
-    this.pinUsuario = input;
+  validatePin(input){
+    this.pinUser = input;
   }
   render(){
     return(
       <div className="text-center">
       <header>
-        <div className="btnVolver">
-         <NavLink to="/signup">
-                <i className="material-icons volver">keyboard_arrow_left</i>
+        <div className="btnBack">
+          <NavLink to="/signup">
+            <i className="material-icons back">keyboard_arrow_left</i>
           </NavLink>
         </div>
         <h1 className="text-center">Sign Up</h1>
         <h4 className="text-center">Join Now for free ride credit.</h4>
         <hr/>
       </header>
-      {this.state.mostrar &&
+      {this.state.show &&
       <div>
         <div>
           <h4 >Tu código Lyft es:</h4>
@@ -81,35 +81,35 @@ class SignUpPhoneValidation extends Component{
         </div>
         <form onSubmit={(e) => {
           e.preventDefault();
-          this.validarPin(this.valorInput);
+          this.validatePin(this.inputValue);
         }}>
           <strong>LAB-</strong>
           <input type="number" 
-                 value={this.valorInput} 
-                 onChange={(e) => {this.inputCambio(e)}}/>
+                 value={this.inputValue} 
+                 onChange={(e) => {this.changeInput(e)}}/>
         {
 
-            this.state.validar ? 
+          this.state.valid 
+          ? 
             <NavLink 
-                  to = "/signup-form"    
-                 className="btn btn-lg btnSiguiente " 
-                 >
-                 Next
-              </NavLink>
-                :
+              to = "/signup-form"    
+              className="btn btn-lg btnNext " 
+            >
+            Next
+            </NavLink>
+          :
             <button 
-                 className="btn btn-lg btnSiguiente disabled" 
-                 >
-                 Next
-          </button>
-
+              className="btn btn-lg btnNext disabled" 
+              >
+              Next
+            </button>
         }
         </form>
       </div>
       }
-      {!this.state.mostrar && 
+      {!this.state.show && 
         <div>
-          <button className="btnSiguiente" onClick={(e) => {this.mostrarTodo(e)}}>Generar Pin</button>
+          <button className="btnNext" onClick={(e) => {this.showAll(e)}}>Generar Pin</button>
         </div> 
       }  
       </div>

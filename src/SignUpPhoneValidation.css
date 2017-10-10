@@ -1,4 +1,4 @@
-.btnVolver {
+.btnBack {
     position: absolute;
     top: 4%;
     left: 1%;
@@ -12,11 +12,11 @@
     font-size: 0.8em;
 }
 
-.volver{
+.back{
     font-size: 4em;
 }
 
-.btnSiguiente{
+.btnNext{
     background-color: #FF00BF;
     color: white;
     border: none;
