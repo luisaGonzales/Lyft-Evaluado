@@ -1,0 +1,9 @@
+body{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlXt0tTMtIVRt387d9W-bcALNTrmtyxvZvL_ghX8nUEzBx3wTp);
+    background-size: cover;
+}
+
+.logo{
+    width: 100px;
+    margin: 0 auto;
+}
