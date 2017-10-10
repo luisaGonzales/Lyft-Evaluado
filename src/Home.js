@@ -19,10 +19,8 @@ const Home = ( {model} ) => {
 				</div>
 				
 			</div>		
-			
-
 			<NavLink to={"/signup"}
-			         className="btn btn-lyft btn-lg btn-block"
+			         className="btn btn-lyft btn-lg btn-block btn-signUp"
 			>
 				Sign Up
 			</NavLink>
