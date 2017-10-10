@@ -102,7 +102,7 @@ class SignUpForm extends Component {
 						>
 							Next
 					</NavLink>
-					) : (
+						) : (
 					<button className="btn btn-lg btn-block btn-lyft disabled">
 						Next
 					</button>
@@ -111,7 +111,10 @@ class SignUpForm extends Component {
 		   	</section>
 		</div>
     );
-    console.log(this.email);
+		console.log(this.email);
+console.log('es',Utils.store())
+
   }
 }
+
 export default SignUpForm;
