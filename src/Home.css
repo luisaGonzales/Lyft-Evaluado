@@ -6,7 +6,16 @@
 }
 
 .logo{
-    width: 100px;
-    margin: 0 auto;
+    width: 170px;
+    left:30%;
 }
 
+.btn-signUp{
+    margin-right: 10px;
+}
+
+.btns{
+    position: absolute;
+    top:80%;
+    width: 100%;
+}
