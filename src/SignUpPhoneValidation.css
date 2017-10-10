@@ -33,3 +33,14 @@
     background-color: rgba(217, 4, 114, 0.36);
     color: white !important;
 }
+
+.inputPin{
+    width: 60px;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+.form{
+    
+}
