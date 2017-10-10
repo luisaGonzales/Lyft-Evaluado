@@ -77,38 +77,44 @@ class SignUpPhoneValidation extends Component{
       <div>
         <div>
           <h4 >Tu código Lyft es:</h4>
-          <h5><strong>LAB-{this.state.pin}</strong></h5>
+          <h5><strong>LAB - {this.state.pin}</strong></h5>
         </div>
-        <form onSubmit={(e) => {
-          e.preventDefault();
-          this.validatePin(this.inputValue);
-        }}>
-          <strong>LAB-</strong>
-          <input type="number" 
-                 value={this.inputValue} 
-                 onChange={(e) => {this.changeInput(e)}}/>
-        {
-          this.state.valid 
-          ? 
-            <NavLink 
-              to = "/signup-form"    
-              className="btn btn-lg btnNext " 
-            >
-            Next
-            </NavLink>
-          :
-            <button 
-              className="btn btn-lg btnNext disabled" 
+        <div className="form">
+          <h4>Ingresa tu código de confirmación de Lyft</h4>
+          <form onSubmit={(e) => {
+            e.preventDefault();
+            this.validatePin(this.inputValue);
+          }}>
+            <strong>LAB - </strong>
+            <input type="number" 
+                  value={this.inputValue} 
+                  onChange={(e) => {this.changeInput(e)}}
+                  className="inputPin"/>
+          {
+            this.state.valid 
+            ? 
+              <NavLink 
+                to = "/signup-form"    
+                className="btn btn-lg btnNext " 
               >
               Next
-            </button>
-        }
-        </form>
+              </NavLink>
+            :
+              <button 
+                className="btn btn-lg btnNext disabled" 
+                >
+                Next
+              </button>
+          }
+          </form>
+        </div>
+        
       </div>
       }
       {!this.state.show && 
         <div>
-          <button className="btnNext" onClick={(e) => {this.showAll(e)}}>Generar Pin</button>
+          <p>Se ha enviado un código de confirmación a este número de celular para poder validar esta información </p>
+          <button className="btnNext" onClick={(e) => {this.showAll(e)}}>Aceptar</button>
         </div> 
       }  
       </div>
