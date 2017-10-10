@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Utils from './Utils';
 
 class LyftModel {
 	constructor () {
@@ -9,7 +10,9 @@ class LyftModel {
 	subscribe (render) {
 		this.notify = render;
 	}
+    
 
 }
+/*ReactDOM.render(<store />, document.getElementById("container"));*/
 
 export default LyftModel;
