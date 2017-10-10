@@ -12,7 +12,7 @@ import './Home.css'
 const Home = ( {model} ) => {
 
 	return (
-		<div className="container">
+		<div className="home container">
 			<div className="row">
 				<div className="col-xs-12">
 					<img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c525.png" className="logo"/>
