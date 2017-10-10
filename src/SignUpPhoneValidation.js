@@ -91,7 +91,6 @@ class SignUpPhoneValidation extends Component {
 }
             </form>
           </div>
-
         </div>
 }
         {!this.state.show && <div>
