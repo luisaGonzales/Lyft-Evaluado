@@ -17,6 +17,7 @@ class LyftModel {
 		this.activeProperty = data.properties[0]
 		this.isRouting = false;
 		this.targetPlace = null;
+		// this.priceStimed =  response.routes[0].overview_path.length / 10  + "USD";
 	}
 	setUserInfo (info) {
 		this.userInfo = info;
