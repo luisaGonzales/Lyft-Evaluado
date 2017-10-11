@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import data from './data/Data';
 
 import Utils from './Utils';
@@ -29,13 +28,10 @@ class LyftModel {
 		this.notify = render;
 	}
 
-    
-
 	setActiveProperty (property) {
 		this.activeProperty = property;
 		this.notify();
 	}
-
 
 	setTarget (targetPlace) {
 		this.targetPlace  = targetPlace;
