@@ -11,12 +11,15 @@ class LyftModel {
 			name: null,
 			surname : null,
 			email : null,
-			phone : null
+			phone : null	
 		}
 		this.properties = data.properties;
 		this.activeProperty = data.properties[0]
 		this.isRouting = false;
 		this.targetPlace = null;
+		this.state ={
+			phone:[]
+		}
 	}
 	setUserInfo (info) {
 		this.userInfo = info;
@@ -42,6 +45,7 @@ class LyftModel {
 		this.isRouting = true;
 		this.notify();
 	}
+	
 }
 /*ReactDOM.render(<store />, document.getElementById("container"));*/
 
