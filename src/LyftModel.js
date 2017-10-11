@@ -4,11 +4,12 @@ import data from './data/Data';
 
 class LyftModel {
 	constructor () {
-		this.userInfo = { 
-			name : null,
-			surname: null,
-			email: null,
-			phone: null,
+		this.notify = null;
+		this.userInfo = {
+			name: null,
+			surname : null,
+			email : null,
+			phone : null	
 		}
 
 		this.notify = null;
@@ -16,7 +17,7 @@ class LyftModel {
 		this.activeProperty = data.properties[0]
 		this.isRouting = false;
 		this.targetPlace = null;
-		// this.priceStimed =  response.routes[0].overview_path.length / 10  + "USD";	
+
 	}
 	setUserInfo (info) {
 		this.userInfo = info;
@@ -42,6 +43,7 @@ class LyftModel {
 		this.isRouting = true;
 		this.notify();
 	}
+	
 }
 /*ReactDOM.render(<store />, document.getElementById("container"));*/
 
