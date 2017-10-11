@@ -17,9 +17,7 @@ class LyftModel {
 		this.activeProperty = data.properties[0]
 		this.isRouting = false;
 		this.targetPlace = null;
-		this.state ={
-			phone:[]
-		}
+
 	}
 	setUserInfo (info) {
 		this.userInfo = info;
