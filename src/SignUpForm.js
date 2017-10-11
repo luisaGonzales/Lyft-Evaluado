@@ -8,8 +8,8 @@ import {
 } from "react-router-dom";
 import "./SignUpForm.css";
 import Utils from "./Utils.js";
-
 class SignUpForm extends Component {
+	
   constructor(props) {
     super(props);
     this.inputName = undefined;
@@ -21,6 +21,7 @@ class SignUpForm extends Component {
 	}
 	formsName(e) {
 		this.inputName = e.target.value;
+		
 		// let patron = /[^a-zA-Z -]|( )|(--)|(^s*$)/;
 	// 	if(patron.test(this.inputName)) {
 	// 		alert('no es correcta')
@@ -30,6 +31,11 @@ class SignUpForm extends Component {
 	}
 	formsEmail(e) {
 		this.inputEmail = e.target.value;
+		// if(this.inputEmail = '') {
+		
+		// }
+		// model.userInfo.email = this.inputEmail
+		
 	}
   render() {
 		const { model } = this.props;
@@ -38,7 +44,11 @@ class SignUpForm extends Component {
         goFordward: e.target.checked
       });
 		};
-		
+		const prueba = () => {
+			model.userInfo.email = this.inputEmail
+			model.userInfo.name = this.inputName
+
+		}
     const validation = e => {
       this.setState = {
         complete: true
@@ -65,6 +75,7 @@ class SignUpForm extends Component {
                 <i className="glyphicon glyphicon-user" />
               </span>
               <input
+								value = {this.inputName}    
                 title="Coloca tu nombre"
                 type="text"
                 className="form-control"
@@ -100,6 +111,7 @@ class SignUpForm extends Component {
             </label>
             {this.state.goFordward ? (
               <NavLink
+								onClick= {prueba}
                 to={"/lyftmap"}
                 className="btn btn-lg btn-block btn-lyft"
               >

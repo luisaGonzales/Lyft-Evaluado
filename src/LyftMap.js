@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import GoogleMaps from './GoogleMaps';
 import ReactGoogleAutocomplete from './ReactGoogleAutocomplete';
- import {
+import './LyftMap.css'
+import {
 	BrowserRouter,
 	Route,
 	Switch,
@@ -51,31 +52,40 @@ const LyftMap = ({model}) => {
 		model.setIsRouting();
 	}
 
-	return (<div>
 
-		<h2>LyftMap </h2>
-			<div>
-				<p>NOMBRE: {model.userInfo.name}</p>
-				<p>EMAIL:  {model.userInfo.email}</p>
-			</div>
+	return (
+		<div>
+		
+				<h2>LyftMap </h2>
+					<div>
+						<p>NOMBRE: {model.userInfo.name}</p>
+						<p>EMAIL:  {model.userInfo.email}</p>
+					</div>
+	<div>
+		<img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c525.png" className="logoMap"/>
+        <span className="fa-stack fa-2x icons person">
+            <i className="fa fa-circle fa-stack-2x fa-inverse fa-2x"></i>
+            <i className="fa fa-user fa-stack-1x"></i>
+        </span>    
+    	<span className="fa-stack fa-2x icons gift">
+            <i className="fa fa-circle fa-stack-2x fa-inverse"></i>
+            <i className="fa fa-gift fa-stack-1x"></i>
+        </span>    
 		<div className="col-md-3 col-sm-3">
 			<div className="form-group">
-				<label htmlFor="destino"> Destino </label>
 				<ReactGoogleAutocomplete
 					onPlaceSelected={(place) => {
-
 						console.log (place);
 						model.setTarget (place);
-
 					}}
 					componentRestrictions={{country: "pe"}}
 				/>
 			</div>
 		</div>
 		<div className="col-md-3 col-sm-3">
-			<button id="ruta" className="btn btn-success" onClick={onPathBntClick}>
-				<i className="fa fa-bicycle" aria-hidden="true"></i>
-				Ruta
+			<button id="ruta" className="btn btnPick" onClick={onPathBntClick}>
+				<i className="material-icons">directions_car</i>
+					<span>Pick Up</span> 
 			</button>
 		</div>
 		<GoogleMaps
@@ -87,9 +97,8 @@ const LyftMap = ({model}) => {
 			isFiltering={isFiltering}
 			isRouting={isRouting}
 		/>
-
-
-
+		
+	</div>
 	</div>);
 }
 

@@ -1,0 +1,61 @@
+.logoMap{
+    width: 100px;
+    position: absolute;
+    top: 2%;
+    left: 40%;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.icons{
+    position: absolute;
+    top: 10px;
+    z-index: 4;
+}
+
+.gift{
+    left: 80%;
+}
+
+.person{
+    left:3%;
+}
+
+
+.head{
+    background-color: transparent;
+}
+
+.btnPick{
+    position: absolute;
+    background-color: #D90472;
+    color: white !important;
+    border: none;
+    width: 93%;
+    height: 50px;
+    border-radius: 0.3em;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.5em;
+    margin-top: 20px; 
+    z-index: 2;
+    top: 550px;
+}
+
+.inputPlace{
+    position: absolute;
+    z-index: 5;
+    top: 520px;
+    height: 50px;
+    width: 93%;
+    border-radius: 5px;
+}
+
+.description{
+    position: absolute;
+    z-index: 3;
+    top: 520px;
+    height: 30px;
+    width: 93%;
+    background-color: transparent;
+}

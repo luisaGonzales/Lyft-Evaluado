@@ -2,6 +2,23 @@ import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch, NavLink, Redirect} from 'react-router-dom'
 import './SignUpPhoneValidation.css';
 
+class Header extends Component {
+  render() {
+    return (
+      <div>
+        <div className="btnBack">
+          <NavLink to="/signup">
+            <i className="material-icons back">keyboard_arrow_left</i>
+          </NavLink>
+        </div>
+        <h1 className="text-center">Sign Up</h1>
+        <h4 className="text-center">Join Now for free ride credit.</h4>
+        <hr/>
+      </div>
+    );
+  }
+}
+
 class SignUpPhoneValidation extends Component {
   constructor(props) {
     super(props);
@@ -18,13 +35,13 @@ class SignUpPhoneValidation extends Component {
     }
   }
   getPin(array) {
-    let values = Math.floor(Math.random() * this.limit);
-    if (!array.some(function (e) {
-      return e === values
-    })) {
-      array.push(values);
-    }
-  }
+		let values = Math.floor(Math.random() * this.limit);
+		if (!array.some(function (e) {
+		  return e === values
+		})) {
+		  array.push(values);
+		}
+	  }
   createPin() {
     while (this.pinCreated.length < this.size && this.size < this.limit) {
       this.getPin(this.pinCreated);
@@ -50,16 +67,10 @@ class SignUpPhoneValidation extends Component {
     return (
       <div className="text-center">
         <header>
-          <div className="btnBack">
-            <NavLink to="/signup">
-              <i className="material-icons back">keyboard_arrow_left</i>
-            </NavLink>
-          </div>
-          <h1 className="text-center">Sign Up</h1>
-          <h4 className="text-center">Join Now for free ride credit.</h4>
-          <hr/>
+          <Header />
         </header>
-        {this.state.show && <div>
+        {this.state.show && 
+        <div>
           <div>
             <h4 >Tu código Lyft es:</h4>
             <h5>
@@ -81,7 +92,8 @@ class SignUpPhoneValidation extends Component {
                 onChange={(e) => {
                 this.changeInput(e)
               }}
-                className="inputPin"/> {this.state.valid
+                className="inputPin"/> 
+                {this.state.valid
                 ? <NavLink to="/signup-form" className="btn btn-lg btnNext ">
                     Next
                   </NavLink>
