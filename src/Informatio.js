@@ -21,8 +21,8 @@ class Info extends Component {
          <NavLink to="/lyftmap">
                 <i className="material-icons back">keyboard_arrow_left</i>
               </NavLink>
-        <h2>LyftMap </h2>
-
+        <img src="https://media.giphy.com/media/TqqXmAUtv4bzG/source.gif" width="450px"/>
+        <h2 className="text-center">Tú en Lyft</h2>
         <p>NOMBRE: {model.userInfo.name}</p>
         <p>EMAIL: {model.userInfo.email}</p>
         <p>PHONE: {model.userInfo.phone}</p>
