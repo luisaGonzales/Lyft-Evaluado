@@ -7,11 +7,34 @@ import {
 	Redirect
 } from 'react-router-dom';
 import './SignUp.css';
+import Utils from './Utils';
 
 
 
 class SignUp extends React.Component {
+
+	constructor(props) {
+		super(props);
+		this.phoneUser = undefined;
+		this.state = {
+			phone: []
+		}
+	}
+	updateUser(user) {
+		this.users.push({
+			name: this.name,
+			email: this.email,
+			phone: this.phone,
+			id: Utils.uuid()
+		});
+
+	}
+	/*validatePhone(phone){
+		this.phone = phone;
+	}	*/
 	render() {
+
+		const { model } = this.props
 		return (
 			<div>
 				<header>
@@ -19,12 +42,9 @@ class SignUp extends React.Component {
 					<p className="text-center">Join now for free ride credit</p>
 				</header>
 				<section className="container">
+					<form className="text-center"
 
-
-
-
-
-					<form className="text-center">
+					>
 						<br></br>
 						<div className="row">
 							<div className="col-sm-12 text-center">
@@ -44,14 +64,32 @@ class SignUp extends React.Component {
 						<br></br>
 						<br></br>
 						<br></br>
-						<input type="text" name="celular" value="+51" id="primerinput"></input><input id="phonenum" type="tel" placeholder="112233445" pattern="^\d{3}\d{3}\d{3}$" required ></input>
-
+						<input
+							type="text"
+							name="celular"
+							value="+51"
+							id="primerinput"></input>
+						<input
+							onChange={
+								e => (model.userInfo.phone = e.target.value)
+							}
+							id="phonenum"
+							value={this.phoneUser}
+							type="tel"
+							placeholder="112233445"
+							pattern="^\d{3}\d{3}\d{3}$"
+							required ></input>
+						<br></br>
+						<br></br>
 						<div className="col-sm-12 text-center">
+
 							<NavLink to={"/signup-validation"}
 								className="btn btn-lyft btn-lg btn-block">
 								Next
-  					</NavLink>
-						</div>
+  							</NavLink>
+					
+
+              					</div>
 					</form>
 
 				</section>
