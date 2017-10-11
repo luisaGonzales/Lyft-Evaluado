@@ -13,6 +13,7 @@ import SignUp from './SignUp';
 import SignUpForm from './SignUpForm';
 import SignUpPhoneValidation from './SignUpPhoneValidation';
 import LyftMap from './LyftMap';
+import Info from  './Informatio';
 
 const NotFound = (props) => {
 	return (
@@ -34,9 +35,8 @@ const App = (props) => {
 				<Route  path="/signup" render={() => <SignUp model={model} />}/>
 				<Route  path="/signup-validation" render={() => <SignUpPhoneValidation model={model} />}/>
 				<Route  path="/signup-form" render={() => <SignUpForm model={model} />}/>
-
 				<Route  path="/lyftmap" render={() => <LyftMap model={model} />}/>
-				
+				<Route  path="/informatio" render={() => <Info model={model} />}/>
 				<Route component={NotFound}/>
 			</Switch>
 		</div>
