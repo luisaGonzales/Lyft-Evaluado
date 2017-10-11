@@ -25,6 +25,7 @@ class LyftModel {
 	subscribe (render) {
 		this.notify = render;
 	}
+
 	setActiveProperty (property) {
 		this.activeProperty = property;
 		this.notify();
@@ -40,5 +41,6 @@ class LyftModel {
 		this.notify();
 	}
 }
+/*ReactDOM.render(<store />, document.getElementById("container"));*/
 
 export default LyftModel;
