@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-
+import './LyftMap.css'
 
 
 export default  class ReactGoogleAutocomplete extends React.Component {
@@ -51,7 +51,7 @@ export default  class ReactGoogleAutocomplete extends React.Component {
 				<input
 					ref="input"
 					{...rest}
-				/>
+				className="inputPlace"/>
 			</div>
 		);
 	}
