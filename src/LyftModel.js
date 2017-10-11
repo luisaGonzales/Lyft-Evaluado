@@ -4,7 +4,6 @@ import data from './data/Data';
 
 class LyftModel {
 	constructor () {
-		this.notify = null;
 		this.userInfo = {
 			name: null,
 			surname : null,
