@@ -27,6 +27,7 @@ class LyftModel {
 	subscribe (render) {
 		this.notify = render;
 	}
+
 	setActiveProperty (property) {
 		this.activeProperty = property;
 		this.notify();
