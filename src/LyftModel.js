@@ -4,13 +4,14 @@ import data from './data/Data';
 
 class LyftModel {
 	constructor () {
-		this.notify = null;
-		this.userInfo = {
-			name: null,
-			surname : null,
-			email : null,
-			phone : null
+		this.userInfo = { 
+			name : null,
+			surname: null,
+			email: null,
+			phone: null,
 		}
+
+		this.notify = null;
 		this.properties = data.properties;
 		this.activeProperty = data.properties[0]
 		this.isRouting = false;

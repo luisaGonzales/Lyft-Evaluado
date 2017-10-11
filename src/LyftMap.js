@@ -54,7 +54,10 @@ const LyftMap = ({model}) => {
 	return (<div>
 
 		<h2>LyftMap </h2>
-
+			<div>
+				<p>NOMBRE: {model.userInfo.name}</p>
+				<p>EMAIL:  {model.userInfo.email}</p>
+			</div>
 		<div className="col-md-3 col-sm-3">
 			<div className="form-group">
 				<label htmlFor="destino"> Destino </label>
