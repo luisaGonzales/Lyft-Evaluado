@@ -9,6 +9,7 @@ import {
 import './SignUp.css';
 import Utils from './Utils';
 
+let Codigo = "+51";
 
 
 class SignUp extends React.Component {
@@ -18,7 +19,10 @@ class SignUp extends React.Component {
 		this.phoneUser = undefined;
 		this.state = {
 			phone: []
+
 		}
+		this.codigo = Codigo;
+		;
 	}
 	updateUser(user) {
 		this.users.push({
@@ -67,7 +71,8 @@ class SignUp extends React.Component {
 						<input
 							type="text"
 							name="celular"
-							value="+51"
+
+							value={this.codigo}
 							id="primerinput"></input>
 						<input
 							onChange={
@@ -87,9 +92,9 @@ class SignUp extends React.Component {
 								className="btn btn-lyft btn-lg btn-block">
 								Next
   							</NavLink>
-					
 
-              					</div>
+
+						</div>
 					</form>
 
 				</section>
