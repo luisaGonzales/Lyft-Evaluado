@@ -1,8 +1,6 @@
 import React from 'react';
-
+import Utils from "./Utils.js";
 import data from './data/Data';
-
-import Utils from './Utils';
 
 class LyftModel {
 	constructor () {
@@ -13,6 +11,8 @@ class LyftModel {
 			email : null,
 			phone : null	
 		}
+
+		this.notify = null;
 		this.properties = data.properties;
 		this.activeProperty = data.properties[0]
 		this.isRouting = false;

@@ -52,7 +52,15 @@ const LyftMap = ({model}) => {
 		model.setIsRouting();
 	}
 
+
 	return (
+		<div>
+		
+				<h2>LyftMap </h2>
+					<div>
+						<p>NOMBRE: {model.userInfo.name}</p>
+						<p>EMAIL:  {model.userInfo.email}</p>
+					</div>
 	<div>
 		<img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c525.png" className="logoMap"/>
         <span className="fa-stack fa-2x icons person">
@@ -90,6 +98,7 @@ const LyftMap = ({model}) => {
 			isRouting={isRouting}
 		/>
 		
+	</div>
 	</div>);
 }
 
